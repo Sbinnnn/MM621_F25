@@ -20,4 +20,4 @@ This is an image below:
 
 ## In class activity 1
 randomization
-[Character Randomization  exercise](Exercise1/index.html)
+[Character Randomization  exercise](Character_Ramdomization/Exercise1/index.html)
