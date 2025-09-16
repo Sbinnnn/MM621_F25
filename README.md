@@ -17,3 +17,7 @@ This is *Emphasized Text*
 This is an image below:
 
 ![This is a picture of a musical](https://assets.playbill.com/editorial/_articleLeadImage/411582297c1eb503a8cfe193bea75a4c-the-phantom-of-the-opera-broadway-kaley-ann-voorhees-ben-crawford-2019-hr.jpg)
+
+## In class activity 1
+randomization
+[Character Randomization  exercise] (Exercise 1/index.html)
