@@ -21,3 +21,5 @@ This is an image below:
 ## In class activity 1
 randomization
 [Character Randomization  exercise1](Character_Ramdomization/Exercise1/index.html)
+
+[Project 1: Interactive Randomizer](Project 1: Interactive Randomizer/index.html)
