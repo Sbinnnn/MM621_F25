@@ -22,4 +22,4 @@ This is an image below:
 randomization
 [Character Randomization  exercise1](Character_Ramdomization/Exercise1/index.html)
 
-[Project 1: Interactive Randomizer](Project 1: Interactive Randomizer/index.html)
+[Project 1: Interactive Randomizer](Interactive Randomizer/index.html)
