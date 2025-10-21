@@ -25,4 +25,4 @@ randomization
 [Project 1: Interactive Randomizer](Project1_InteractiveRandomizer/index.html)
 
 ## In class Exercise 2
-[Mini Data Viz using Pantry Data & CSV Files](In-Class_Exercise2-MiniData_VizusingPantryData/index.html)
+[Mini Data Viz using Pantry Data & CSV Files](In_Class_Exercise2/index.html)
