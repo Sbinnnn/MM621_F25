@@ -16,7 +16,10 @@ This is *Emphasized Text*
 
 This is an image below:
 
-![This is a picture of a musical](https://assets.playbill.com/editorial/_articleLeadImage/411582297c1eb503a8cfe193bea75a4c-the-phantom-of-the-opera-broadway-kaley-ann-voorhees-ben-crawford-2019-hr.jpg)
+![This is a picture of a musical](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ashleyhajimirsadeghi.com%2Fblog%2Fthe-phantom-of-the-opera-broadway-review&psig=AOvVaw2PDaJfwMUrtjbjUeTZzSdP&ust=1761201828407000&source=images&cd=vfe&opi=89978449&ved=0CBkQjhxqFwoTCJiVz5yat5ADFQAAAAAdAAAAABAE)
+
+## Readling ##
+[Cpt4_1](journal/Cpt4(125-141).md)
 
 ## In class activity 1
 randomization
