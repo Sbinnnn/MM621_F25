@@ -16,7 +16,7 @@ This is *Emphasized Text*
 
 This is an image below:
 
-![This is a picture of a musical](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ashleyhajimirsadeghi.com%2Fblog%2Fthe-phantom-of-the-opera-broadway-review&psig=AOvVaw2PDaJfwMUrtjbjUeTZzSdP&ust=1761201828407000&source=images&cd=vfe&opi=89978449&ved=0CBkQjhxqFwoTCJiVz5yat5ADFQAAAAAdAAAAABAE)
+![This is a picture of a musical](https://images.squarespace-cdn.com/content/v1/5ea1f794501b7153b29e7cd7/ae5d0c54-dea5-46f2-aedd-8a5f0c7e2967/114596-27.jpg?format=2500w)
 
 ## Readling ##
 [Cpt4_1](journal/Cpt4(125-141).md)
