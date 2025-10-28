@@ -7,10 +7,10 @@ function preload() {
 
 function setup() {
   createCanvas(600, 400);
-  background(255);
+  background(0);
   textAlign(CENTER);
   textSize(14);
-  fill(0);
+  fill(255);
   text("Korean Food Nutrition Visualization", width / 2, 30);
 
   //one food data at one time
@@ -30,10 +30,10 @@ function setup() {
 
     //sodium color
     fill(random(255), random(255), random(255), 120, 180);
-    noStroke();
+    stroke(255);
     ellipse(x, y, size);
 
-    fill(0);
+    fill(255);
     text(item, x, height - 10);
   }
 }
