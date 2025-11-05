@@ -30,5 +30,8 @@ randomization
 ## In class Exercise 2
 [Mini Data Viz using Pantry Data & CSV Files](In-classExercise2/index.html)
 
+## Projects ##
+[Project 2: Data Visualization](Project2_Data_Visualization/index.html)
+
 ## Extra Credit ##
 [Research & Inspired Prototype](extraCreadit/Research_InspiredPrototype/index.html)
