@@ -34,3 +34,5 @@ randomization
 
 ## Extra Credit ##
 [Research & Inspired Prototype](extraCreadit/Research_InspiredPrototype/index.html)
+
+[Project 2: Data Visualization](Project2_Data_Visualization/index.html)
