@@ -30,9 +30,8 @@ randomization
 
 ## Projects ##
 [Project 1: Interactive Randomizer](Project1_InteractiveRandomizer/index.html)
+
 [Project 2: Data Visualization](Project2_Data_Visualization/index.html)
 
 ## Extra Credit ##
 [Research & Inspired Prototype](extraCreadit/Research_InspiredPrototype/index.html)
-
-[Project 2: Data Visualization](Project2_Data_Visualization/index.html)
