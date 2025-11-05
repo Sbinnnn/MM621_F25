@@ -25,12 +25,11 @@ This is an image below:
 randomization
 [Character Randomization  exercise1](Character_Ramdomization/Exercise1/index.html)
 
-[Project 1: Interactive Randomizer](Project1_InteractiveRandomizer/index.html)
-
 ## In class Exercise 2
 [Mini Data Viz using Pantry Data & CSV Files](In-classExercise2/index.html)
 
 ## Projects ##
+[Project 1: Interactive Randomizer](Project1_InteractiveRandomizer/index.html)
 [Project 2: Data Visualization](Project2_Data_Visualization/index.html)
 
 ## Extra Credit ##
