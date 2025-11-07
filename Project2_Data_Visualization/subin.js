@@ -4,35 +4,35 @@ let tvCharts = [];
 let bothCharts = [];
 let noneCharts = [];
 
-let mode = "all"; // start: show all
+let mode = "all";
+let gallery = [];
+let alpha = 0;
 
 function setup() {
   createCanvas(800, 600);
   textSize(16);
-  loadJSON("https://api.disneyapi.dev/character?page=1&pageSize=1000", gotData);
+  textAlign(CENTER);
+  loadJSON("https://api.disneyapi.dev/character?page=1&pageSize=300", gotData);
 }
 
 function gotData(data) {
   apiData = data;
-
   for (let i = 0; i < apiData.data.length; i++) {
     let c = apiData.data[i];
-    let hasFilm = c.shortFilms.length > 0;
+    let hasFilm = c.shortFilms.length > 0 || c.films.length > 0;
     let hasTV = c.tvShows.length > 0;
 
-    if (hasFilm && hasTV) bothCharts.push(c.name);
-    else if (hasFilm) filmCharts.push(c.name);
-    else if (hasTV) tvCharts.push(c.name);
-    else noneCharts.push(c.name);
+    if (hasFilm && hasTV) bothCharts.push(c);
+    else if (hasFilm) filmCharts.push(c);
+    else if (hasTV) tvCharts.push(c);
+    else noneCharts.push(c);
   }
 }
 
 function draw() {
   background(0);
   fill(255);
-  textAlign(CENTER);
-  text("Disney Characters: Film vs TV", width / 2, 50);
-  text("Press F / T / B / N / A", width / 2, 80);
+  text("Click each chart to see chararcters!", width / 2, 50);
 
   let total = filmCharts.length + tvCharts.length + bothCharts.length + noneCharts.length;
   let barW = 100;
@@ -47,32 +47,67 @@ function draw() {
     {label: "none", data: noneCharts, color: color(200)}
   ];
 
+  // draw chart
   for (let i = 0; i < bars.length; i++) {
     let b = bars[i];
     let h = (b.data.length / total) * maxH;
     let x = startX + i * 150;
     let y = endY - h;
 
-    //show origin color of selected bar
-    if (mode !== "all" && mode !== b.label) {
-      fill(80); // none selected - gray 
-    } else {
-      fill(b.color); // sellected bar origin color
-    }
+    if (mode !== "all" && mode !== b.label) fill(80);
+    else fill(b.color);
 
     rect(x, y, barW, h);
-
     fill(255);
     text(b.label, x + barW / 2, endY + 20);
     text(b.data.length, x + barW / 2, y - 10);
+
+    // click area
+    if (mouseIsPressed && mouseX > x && mouseX < x + barW && mouseY > y && mouseY < endY) {
+      showGallery(b.data);
+      mode = b.label;
+    }
+
+    b.x = x;
+    b.y = y;
+    b.h = h;
+    bars[i] = b;
+  }
+
+  // img over a chart, if img overlaps a chart.
+  for (let b of bars) {
+    if (mode === b.label && gallery.length > 0) {
+      alpha = lerp(alpha, 255, 0.08);
+      let spacing = 35;
+      for (let j = 0; j < gallery.length; j++) {
+        let g = gallery[j];
+        if (g.img) {
+          push();
+          tint(255, alpha);
+          let imgX = b.x + barW / 2 - 90 + j * (spacing + 40);
+          let imgY = b.y - 80; // 막대 위로 살짝 띄움
+          image(g.img, imgX, imgY, 60, 60);
+          noTint();
+          fill(255, alpha);
+          textSize(12);
+          text(g.name, imgX + 30, imgY - 10);
+          pop();
+        }
+      }
+    }
   }
 }
 
-// keyboard input
-function keyPressed() {
-  if (key === 'f' || key === 'F') mode = "film";
-  if (key === 't' || key === 'T') mode = "tv";
-  if (key === 'b' || key === 'B') mode = "both";
-  if (key === 'n' || key === 'N') mode = "none";
-  if (key === 'a' || key === 'A') mode = "all";
+// show 3 random img in each clich
+function showGallery(list) {
+  gallery = [];
+  alpha = 0;
+  let picks = shuffle(list).slice(0, 3);
+  for (let p of picks) {
+    let g = {name: p.name, img: null};
+    if (p.imageUrl && p.imageUrl.startsWith("http")) {
+      g.img = loadImage(p.imageUrl);
+    }
+    gallery.push(g);
+  }
 }
