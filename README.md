@@ -35,3 +35,6 @@ randomization
 
 ## Extra Credit ##
 [Research & Inspired Prototype](extraCreadit/Research_InspiredPrototype/index.html)
+
+## Project3: final ##
+[Project 3: Final](Project3_Final/index.html)
