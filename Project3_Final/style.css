@@ -1,0 +1,103 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  z-index: 0;
+}
+
+body {
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #1d2636;
+  color: #000000;
+  line-height: 1.6;
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: #ffffff;
+  font-family: "Charm", cursive;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+
+header,
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 24px;
+}
+
+header h1 {
+  margin: 0 0 8px;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+header p {
+  margin: 0;
+  padding-bottom: 24px;
+  color: #bcc4d0;
+  font-size: 1.05rem;
+}
+
+.hero {
+  margin: 32px auto;
+  padding: 28px 24px;
+  border-radius: 16px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.hero h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #222;
+}
+
+ul {
+  padding-left: 18px;
+  margin: 8px 0;
+  color: #333;
+}
+
+a {
+  color: #9cbdda;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.ui-btn {
+  padding: 12px 24px 12px 24px;
+  background-color: rgb(43, 76, 108);
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+}
