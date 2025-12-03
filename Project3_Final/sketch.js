@@ -58,7 +58,10 @@ image(bgImg, 0, 0, width, height);
   for (let b of bowls) {
     let pos = b.body.position;
 
-// bowl shadow
+    imageMode(CENTER);
+    image(b.img, pos.x, pos.y, b.size, b.size);
+  
+    // bowl shadow
     noStroke();
     fill(50, 120, 200, 80);
     ellipse(
@@ -67,10 +70,6 @@ image(bgImg, 0, 0, width, height);
       b.size * 0.9,
       b.size * 0.35
     );
-    
-    imageMode(CENTER);
-    image(b.img, pos.x, pos.y, b.size, b.size);
-
   }
   
 }
@@ -89,7 +88,7 @@ function createBowl(x, y) {
   // circular physics body
   let body = Bodies.circle(x, y, size / 2, {
     restitution: 1,     // bounce
-    frictionAir: 0.01   // air friction
+    frictionAir: 0.004   // air friction
   });
 
   World.add(world, body);

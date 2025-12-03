@@ -19,7 +19,7 @@ body {
   font-family: "Nanum Myeongjo", serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #1d2636;
+  background-color: #ffffff;
   color: #000000;
   line-height: 1.6;
   text-align: center;
@@ -27,7 +27,7 @@ body {
 
 h1,
 h2 {
-  color: #ffffff;
+  color: #000000;
   font-family: "Charm", cursive;
   font-weight: 400;
   font-style: normal;
@@ -52,7 +52,7 @@ header h1 {
 header p {
   margin: 0;
   padding-bottom: 24px;
-  color: #bcc4d0;
+  color: #2c3a4e;
   font-size: 1.05rem;
 }
 
@@ -78,7 +78,7 @@ ul {
 }
 
 a {
-  color: #9cbdda;
+  color: #6f8faa;
   text-decoration: none;
 }
 
@@ -90,7 +90,8 @@ img {
 }
 
 .ui-btn {
-  padding: 12px 24px 12px 24px;
+  padding: 12px 24px;
+  margin-bottom: 24px;
   background-color: rgb(43, 76, 108);
   color: #ffffff;
   border-radius: 8px;
