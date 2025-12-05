@@ -56,13 +56,22 @@ function draw() {
   Engine.update(engine);
 
   let now = millis();
+  let minV = 0.5;
 
-  // draw bowls
   for (let b of bowls) {
     let pos = b.body.position;
+    let vel = b.body.velocity;
     let shakeX = 0;
 
-    // collision wobbling condition
+    // keep minimum velocity
+    if (abs(vel.x) < minV && abs(vel.y) < minV) {
+      Matter.Body.setVelocity(b.body, {
+        x: vel.x < 0 ? -minV : minV,
+        y: vel.y < 0 ? -minV : minV
+      });
+    }
+
+    // collision wobbling effect
     if (wobbleData.has(b.body.id)) {
       let startTime = wobbleData.get(b.body.id);
       let t = (now - startTime) / wobbleDuration;
@@ -80,9 +89,9 @@ function draw() {
 
     imageMode(CENTER);
     image(b.img, pos.x + shakeX, pos.y, b.size, b.size);
-
   }
 }
+
 
 function mousePressed() {
   createBowl(mouseX, mouseY);
@@ -94,7 +103,7 @@ function createBowl(x, y) {
 
   let body = Bodies.circle(x, y, size / 2, {
     restitution: 1,
-    frictionAir: 0.004
+    frictionAir: 0.01
   });
 
   World.add(world, body);
