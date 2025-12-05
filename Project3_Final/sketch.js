@@ -12,6 +12,10 @@ let bowlImages = [];
 let sounds = [];
 let bowls = [];
 
+// wobbling setup
+let wobbleData = new Map();
+let wobbleDuration = 200;
+let wobbleStrength = 8;
 
 function preload() {
   sounds.push(loadSound("sound/sound1.mp3"));
@@ -35,82 +39,76 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  // create the physics engine
   engine = Engine.create();
   world = engine.world;
-
-  // no gravity
   world.gravity.y = 0;
 
   makeWalls();
 
-  // bowl sounds
   Events.on(engine, "collisionStart", playHitSound);
+  Events.on(engine, "collisionStart", wobbleOnCollision);
 }
 
 function draw() {
   imageMode(CORNER);
-image(bgImg, 0, 0, width, height);
+  image(bgImg, 0, 0, width, height);
 
   Engine.update(engine);
 
-  // draw random bowls
+  let now = millis();
+
+  // draw bowls
   for (let b of bowls) {
     let pos = b.body.position;
+    let shakeX = 0;
 
-    imageMode(CENTER);
-    image(b.img, pos.x, pos.y, b.size, b.size);
-  
-    // bowl shadow
+    // collision wobbling condition
+    if (wobbleData.has(b.body.id)) {
+      let startTime = wobbleData.get(b.body.id);
+      let t = (now - startTime) / wobbleDuration;
+
+      if (t < 1) {
+        shakeX = sin(t * PI * 10) * wobbleStrength;
+      } else {
+        wobbleData.delete(b.body.id);
+      }
+    }
+
     noStroke();
     fill(50, 120, 200, 80);
-    ellipse(
-      pos.x,
-      pos.y + b.size * 0.25,
-      b.size * 0.9,
-      b.size * 0.35
-    );
+    ellipse(pos.x, pos.y + b.size * 0.25, b.size * 0.9, b.size * 0.35);
+
+    imageMode(CENTER);
+    image(b.img, pos.x + shakeX, pos.y, b.size, b.size);
+
   }
-  
 }
 
-// mouse press > make a new random bowl
 function mousePressed() {
   createBowl(mouseX, mouseY);
 }
 
-
-// make a new random bowl
 function createBowl(x, y) {
   let size = random(80, 200);
   let img = random(bowlImages);
 
-  // circular physics body
   let body = Bodies.circle(x, y, size / 2, {
-    restitution: 1,     // bounce
-    frictionAir: 0.004   // air friction
+    restitution: 1,
+    frictionAir: 0.004
   });
 
   World.add(world, body);
 
-  // bowls
-  bowls.push({
-    body: body,
-    img: img,
-    size: size
-  });
+  bowls.push({ body, img, size });
 
-  // first move speed
   Matter.Body.setVelocity(body, {
     x: random(-5, 5),
     y: random(-5, 5)
   });
 }
 
-
-// wall
 function makeWalls() {
-  let t = 200; // wall thinkness
+  let t = 200;
 
   let walls = [
     Bodies.rectangle(width/2, -t/2, width, t, { isStatic: true }),
@@ -122,8 +120,6 @@ function makeWalls() {
   World.add(world, walls);
 }
 
-
-// sound
 function playHitSound(event) {
   let sound = random(sounds);
   if (!sound.isPlaying()) {
@@ -131,8 +127,14 @@ function playHitSound(event) {
   }
 }
 
+//collision wobbling effect
+function wobbleOnCollision(event) {
+  for (let p of event.pairs) {
+    wobbleData.set(p.bodyA.id, millis());
+    wobbleData.set(p.bodyB.id, millis());
+  }
+}
 
-// full canvas size
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
