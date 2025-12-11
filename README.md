@@ -20,6 +20,7 @@ This is an image below:
 
 ## Readling ##
 [Cpt4_1](journal/Cpt4(125-141).md)
+[Cpt5 2](journal/Reading_Chapter5_Part2.md)
 
 ## In class activity 1
 randomization
