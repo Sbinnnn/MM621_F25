@@ -20,7 +20,9 @@ This is an image below:
 
 ## Readling ##
 [Cpt4_1](journal/Cpt4(125-141).md)
-[Cpt5 2](journal/Reading_Chapter5_Part2.md)
+[Cpt4 2](journal/Reading_Chapter5_Part2.md)
+[Cpt5 1](https://www.canva.com/design/DAG4ndNna6Q/51CTReN_HpTmvmL8yevazw/view?utm_content=DAG4ndNna6Q&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h099e199e4c#1)
+[Cpt5 2]()
 
 ## In class activity 1
 randomization
