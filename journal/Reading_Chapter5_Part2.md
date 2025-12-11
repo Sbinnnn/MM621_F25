@@ -1,4 +1,4 @@
-#The Design of Everyday Things — Chapter 5 Part 2 Personal Response  
+# The Design of Everyday Things — Chapter 5 Part 2 Personal Response  
 Subin Choi
 
 Sometimes in daily life, I wonder why certain products are designed with restrictions when they could be easier to use. For example, when I first tried to open an Advil bottle or a prescription bottle from CVS, it was surprisingly difficult. Later, I learned that it was a child-safety cap, and it made me think about the hidden complexity behind these design constraints. Even though forcing functions can be frustrating, I often forget that they are not created to annoy users—they are meant to prevent mistakes and reduce danger. Interlocks, lock-ins, and lockouts all exist to stop possible accidents before they happen, but people sometimes try to bypass them because they feel inconvenient. This makes me wonder how designers can create safety features that do not feel uncomfortable or restrictive for users.
