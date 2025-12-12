@@ -19,16 +19,18 @@ This is an image below:
 ![This is a picture of a musical](https://images.squarespace-cdn.com/content/v1/5ea1f794501b7153b29e7cd7/ae5d0c54-dea5-46f2-aedd-8a5f0c7e2967/114596-27.jpg?format=2500w)
 
 ## Readling ##
+[Cpt1](journal/entry1.md)
+[Cpt2](journal/Cpt_2.md)
 [Cpt4_1](journal/Cpt4(125-141).md)
 [Cpt4 2](journal/Reading_Chapter4_Part2.md)
 [Cpt5 1](https://www.canva.com/design/DAG4ndNna6Q/51CTReN_HpTmvmL8yevazw/view?utm_content=DAG4ndNna6Q&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h099e199e4c#1)
 [Cpt5 2](journal/Chapter5_Part2.md)
 
-## In class activity 1
+## In-class activity 1
 randomization
 [Character Randomization  exercise1](Character_Ramdomization/Exercise1/index.html)
 
-## In class Exercise 2
+## In-class Exercise 2
 [Mini Data Viz using Pantry Data & CSV Files](In-classExercise2/index.html)
 
 ## Projects ##
@@ -36,8 +38,8 @@ randomization
 
 [Project 2: Data Visualization](Project2_Data_Visualization/index.html)
 
+[Project 3: Final](Project3_Final/index.html)
+
 ## Extra Credit ##
 [Research & Inspired Prototype](extraCreadit/Research_InspiredPrototype/index.html)
 
-## Project3: final ##
-[Project 3: Final](Project3_Final/index.html)
