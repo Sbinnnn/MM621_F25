@@ -83,9 +83,19 @@ function draw() {
       }
     }
 
+    push();
+    drawingContext.shadowBlur = 40;
+    drawingContext.shadowColor = "rgba(0, 0, 0)";
+
     noStroke();
     fill(50, 120, 200, 80);
-    ellipse(pos.x, pos.y + b.size * 0.25, b.size * 0.9, b.size * 0.35);
+    ellipse(
+      pos.x,
+      pos.y + b.size * 0.25,
+      b.size * 0.9,
+      b.size * 0.35
+    );
+    pop(); 
 
     imageMode(CENTER);
     image(b.img, pos.x + shakeX, pos.y, b.size, b.size);
